@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f5efe3;
+  --color-card: #fffcf6;
+  --color-ink: #1e2a2b;
+  --color-muted: #59645f;
+  --color-line: #e3d9c6;
+  --color-teal: #0e6b62;
+  --color-teal-soft: #d8eee8;
+  --color-rust: #a63d24;
+  --color-rust-soft: #f8e2d8;
+  --color-mustard: #c99a2e;
+  --color-mustard-soft: #f5e8c7;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(ellipse at top, rgba(201, 154, 46, 0.12), transparent 60%),
+    repeating-linear-gradient(to bottom, transparent 0 31px, rgba(30, 42, 43, 0.035) 31px 32px);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.perforation {
+  background-image: radial-gradient(circle at 6px 0, transparent 5px, var(--color-card) 5.5px);
+  background-size: 12px 8px;
+  background-repeat: repeat-x;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
